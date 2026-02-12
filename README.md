@@ -1,4 +1,4 @@
-Personal Health Coach AI
+#Personal Health Coach AI
 
 Personal Health Coach AI is an AI-powered health monitoring and recommendation system designed to help users improve their overall wellness. The application analyzes health data from wearable devices and provides personalized guidance for nutrition, exercise, sleep, and goal management.
 
