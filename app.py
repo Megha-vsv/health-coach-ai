@@ -1,5 +1,5 @@
 import streamlit as st
-from health_engine import analyze_health
+from health_engine import analyze_health   # ✅ Correct function name
 
 st.set_page_config(page_title="Personal Health Coach AI", layout="wide")
 
@@ -13,14 +13,16 @@ calories = st.number_input("Daily Calories", min_value=0)
 heart_rate = st.number_input("Resting Heart Rate (bpm)", min_value=0)
 
 if st.button("Analyze Health"):
-    status, recs = analyze_health(steps, sleep_hours, calories, heart_rate)
+    status, recommendations = analyze_health(
+        steps, sleep_hours, calories, heart_rate
+    )
 
-    st.subheader("Health Status:")
+    st.subheader("Health Status")
     st.success(status)
 
-    if recs:
-        st.subheader("Recommendations:")
-        for r in recs:
+    if recommendations:
+        st.subheader("Recommendations")
+        for r in recommendations:
             st.write(f"- {r}")
     else:
-        st.write("No recommendations needed — keep up the good work!")
+        st.write("No recommendations needed. Keep up the good work!")
