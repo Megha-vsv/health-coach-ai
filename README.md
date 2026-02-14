@@ -1,5 +1,3 @@
-# TEST UPDATE - Megha Project
-
 # Personal Health Coach AI
 
 Personal Health Coach AI is a working health monitoring and recommendation system built using Python and Streamlit.
