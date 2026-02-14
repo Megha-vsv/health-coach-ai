@@ -1,76 +1,102 @@
-# Personal Health Coach AI
+# 🩺 Personal Health Coach AI
 
-Personal Health Coach AI is a working health monitoring and recommendation system built using Python and Streamlit.
+A simple AI-powered health analysis web application built using **Python** and **Streamlit**.
 
-The application analyzes user health inputs (steps, sleep hours, calories intake, heart rate) and provides risk scoring and personalized recommendations.
-
----
-
-## 🚀 How to Run
-
-1. Install dependencies:
-   pip install -r requirements.txt
-
-2. Run the application:
-   streamlit run app.py
-
-The app will open in your browser at:
-http://localhost:8501
+This project analyzes daily health metrics such as steps, sleep hours, calorie intake, and resting heart rate to provide personalized health status and recommendations.
 
 ---
 
-## 🧠 Project Architecture
+## 🚀 Features
 
-- app.py → Streamlit user interface
-- health_engine.py → Core health risk analysis engine
-- sample_data.csv → Sample wearable health dataset
-- requirements.txt → Project dependencies
-
----
-
-## ⚙️ Core Features
-
-- Health risk scoring system
-- Rule-based anomaly detection
-- Personalized health recommendations
-- Interactive Streamlit dashboard
-- Modular architecture (UI + engine separation)
+- 📊 Health risk analysis based on user input
+- 🧠 Rule-based recommendation system
+- 🖥️ Interactive Streamlit dashboard
+- 🗂️ Modular Python architecture
+- 📁 Sample dataset included
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-- Python
+- Python 3.x
 - Streamlit
-- Pandas
 
 ---
 
-## 🧩 Health Analysis Logic
+## 📂 Project Structure
 
-The system evaluates:
-
-- Low daily steps (< 5000)
-- Insufficient sleep (< 6 hours)
-- High calorie intake (> 2500)
-- High resting heart rate (> 100 bpm)
-
-Based on detected risk factors, a health status is generated:
-- Excellent Health
-- Moderate Risk
-- High Risk
-
----
-
-## 📌 Future Improvements
-
-- Integration with real wearable APIs
-- Machine learning-based risk prediction
-- Long-term trend visualization
-- Database integration
+```
+health-coach-ai/
+│
+├── app.py              # Streamlit UI
+├── health_engine.py    # Core health analysis logic
+├── sample_data.csv     # Sample dataset for testing
+├── requirements.txt    # Project dependencies
+├── LICENSE
+├── .gitignore
+└── README.md
+```
 
 ---
 
-## License
+## ⚙️ How It Works
 
-MIT License
+1. User inputs daily health metrics.
+2. The data is passed to `health_engine.py`.
+3. Health parameters are evaluated using rule-based logic.
+4. A health status is calculated.
+5. Personalized recommendations are displayed on the dashboard.
+
+---
+
+## 💻 How to Run the Project Locally
+
+### 1️⃣ Clone the repository
+
+```
+git clone https://github.com/Megha-vsv/health-coach-ai.git
+```
+
+### 2️⃣ Navigate into the project folder
+
+```
+cd health-coach-ai
+```
+
+### 3️⃣ Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 4️⃣ Run the Streamlit app
+
+```
+streamlit run app.py
+```
+
+The application will start at:
+
+```
+http://localhost:8501
+```
+
+---
+
+## 📊 Sample Data
+
+The project includes a `sample_data.csv` file that can be used for testing or future feature expansion.
+
+---
+
+## 📌 Project Objective
+
+The objective of this project is to demonstrate a structured and functional Python implementation that analyzes health metrics and provides meaningful feedback through an interactive web interface.
+
+This project was developed as part of Challenge 2 submission.
+
+---
+
+## 👩‍💻 Author
+
+Vasava Meghaben Rajeshbhai
