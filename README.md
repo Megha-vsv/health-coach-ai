@@ -1,81 +1,78 @@
+# TEST UPDATE - Megha Project
+
 # Personal Health Coach AI
 
-Personal Health Coach AI is an AI-powered health monitoring and recommendation system designed to help users improve their overall wellness. The application analyzes health data from wearable devices and provides personalized guidance for nutrition, exercise, sleep, and goal management.
+Personal Health Coach AI is a working health monitoring and recommendation system built using Python and Streamlit.
 
-## Project Overview
+The application analyzes user health inputs (steps, sleep hours, calories intake, heart rate) and provides risk scoring and personalized recommendations.
 
-This project demonstrates the use of AI agents to build a smart and adaptive health assistant. It processes daily and long-term health data, identifies patterns, detects anomalies, and delivers actionable recommendations to users.
+---
 
-Project Level: Intermediate
-Estimated Duration: 1 Week
+## 🚀 How to Run
 
-## Core Features
+1. Install dependencies:
+   pip install -r requirements.txt
 
-* Health data monitoring using wearable devices
-* Personalized nutrition recommendations and meal planning
-* Customized workout and exercise planning
-* Sleep quality analysis and improvement suggestions
-* Goal setting and progress tracking
-* Anomaly detection in health metrics
-* Doctor visit preparation with summarized health reports
+2. Run the application:
+   streamlit run app.py
 
-## AI Agent Architecture
+The app will open in your browser at:
+http://localhost:8501
 
-The system is built using multiple specialized AI agents:
+---
 
-* Health Monitoring Agent: Collects and processes data such as steps, heart rate, calories, and activity levels
-* Nutrition Tracking Agent: Tracks meals, calories, and nutritional balance
-* Exercise Planning Agent: Generates personalized workout routines based on user fitness level
-* Sleep Analysis Agent: Evaluates sleep duration and quality
-* Goal Setting Agent: Helps users set and track health goals
+## 🧠 Project Architecture
 
-## Wearable API Integration
+- app.py → Streamlit user interface
+- health_engine.py → Core health risk analysis engine
+- sample_data.csv → Sample wearable health dataset
+- requirements.txt → Project dependencies
 
-The application supports integration with popular wearable platforms:
+---
 
-* Fitbit API
-* Apple Health API
+## ⚙️ Core Features
 
-Collected data includes activity metrics, heart rate, calories burned, and sleep information.
+- Health risk scoring system
+- Rule-based anomaly detection
+- Personalized health recommendations
+- Interactive Streamlit dashboard
+- Modular architecture (UI + engine separation)
 
-## ScaleDown Data Compression
+---
 
-ScaleDown is used to efficiently manage long-term health data while maintaining full health context.
+## 🛠 Tech Stack
 
-Benefits include:
+- Python
+- Streamlit
+- Pandas
 
-* Compression of 12 months of health data by approximately 80 percent
-* Reduced application latency by around 65 percent
-* Faster health analysis and personalized recommendations
+---
 
-## Deliverables
+## 🧩 Health Analysis Logic
 
-* Health monitoring application
-* AI coach interface
-* User progress dashboard
-* Health improvement analysis report
+The system evaluates:
 
-## Suggested Tech Stack
+- Low daily steps (< 5000)
+- Insufficient sleep (< 6 hours)
+- High calorie intake (> 2500)
+- High resting heart rate (> 100 bpm)
 
-* Frontend: React or Flutter
-* Backend: Python (FastAPI or Flask)
-* AI and Agents: OpenAI API, LangChain, or similar frameworks
-* Database: PostgreSQL or MongoDB
-* Data Visualization: Chart.js or Recharts
+Based on detected risk factors, a health status is generated:
+- Excellent Health
+- Moderate Risk
+- High Risk
 
-## Expected Outcomes
+---
 
-* Improved user awareness of health habits
-* Data-driven lifestyle recommendations
-* Efficient handling of long-term health data
-* Personalized coaching experience
+## 📌 Future Improvements
 
-## Future Enhancements
+- Integration with real wearable APIs
+- Machine learning-based risk prediction
+- Long-term trend visualization
+- Database integration
 
-* Mental health and stress monitoring
-* Integration with additional wearable devices
-* Predictive health risk analysis
+---
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License
